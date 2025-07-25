@@ -375,8 +375,10 @@ document.getElementById("sello").addEventListener("click", function() {
 $(window).scrollTop(0);
 
 
-document.querySelector('.modal').addEventListener('hidden.bs.modal', function (event) {
-    $('body').css('overflow-y', 'auto');
+document.querySelectorAll('.modal').forEach(function(modal) {
+    modal.addEventListener('hidden.bs.modal', function (event) {
+        $('body').css('overflow-y', 'auto');
+    });
 });
 
 </script>
